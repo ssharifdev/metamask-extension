@@ -671,6 +671,42 @@ const updateMetamaskStateFromBackground = () => {
   });
 };
 
+export function updatePreviousGasParams(txId, previousGasParams) {
+  return async (dispatch) => {
+    try {
+      await promisifiedBackground.updatePreviousGasParams(
+        txId,
+        previousGasParams,
+      );
+    } catch (error) {
+      dispatch(txError(error));
+      dispatch(goHome());
+      log.error(error.message);
+      throw error;
+    }
+
+    return previousGasParams;
+  };
+}
+
+export function updateTransactionUserSettings(txId, txUserSettings) {
+  return async (dispatch) => {
+    try {
+      await promisifiedBackground.updateTransactionUserSettings(
+        txId,
+        txUserSettings,
+      );
+    } catch (error) {
+      dispatch(txError(error));
+      dispatch(goHome());
+      log.error(error.message);
+      throw error;
+    }
+
+    return txUserSettings;
+  };
+}
+
 export function updateSwapApprovalTransaction(txId, txSwapApproval) {
   return async (dispatch) => {
     try {
@@ -700,6 +736,9 @@ export function updateEditableParams(txId, editableParams) {
       throw error;
     }
 
+    dispatch(
+      updateTransactionParams(editableParams.id, editableParams.txParams),
+    );
     return editableParams;
   };
 }
