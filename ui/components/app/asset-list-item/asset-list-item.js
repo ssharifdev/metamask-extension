@@ -10,10 +10,11 @@ import InfoIcon from '../../ui/icon/info-icon.component';
 import Button from '../../ui/button';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import { useMetricEvent } from '../../../hooks/useMetricEvent';
-import { ASSET_TYPES, updateSendAsset } from '../../../ducks/send';
+import { updateSendAsset } from '../../../ducks/send';
 import { SEND_ROUTE } from '../../../helpers/constants/routes';
 import { SEVERITIES } from '../../../helpers/constants/design-system';
 import { INVALID_ASSET_TYPE } from '../../../helpers/constants/error-keys';
+import { ASSET_TYPES } from '../../../../shared/constants/transaction';
 
 const AssetListItem = ({
   className,

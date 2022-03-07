@@ -702,6 +702,9 @@ export default class MetamaskController extends EventEmitter {
       ),
       getAccountType: this.getAccountType.bind(this),
       getDeviceModel: this.getDeviceModel.bind(this),
+      getTokenStandardAndDetails: this.assetsContractController.getTokenStandardAndDetails.bind(
+        this.assetsContractController,
+      ),
     });
     this.txController.on('newUnapprovedTx', () => opts.showUserConfirmation());
 
