@@ -1,11 +1,5 @@
 .collectibles-detection-notice {
-  @media screen and (max-width: $break-small) {
-    margin: 16px 16px 0 16px;
-  }
-
-  @media screen and (min-width: $break-large) {
-    margin: 32px 48px 0 48px;
-  }
+  margin: 16px 16px 0 16px;
 
   &__message {
     position: relative;
@@ -19,7 +13,35 @@
       right: 8px;
     }
 
-    a.collectibles-detection-notice__message__link {
+    &__fullscreen-links {
+      @media screen and (min-width: 769px) {
+        margin-left: calc((100vw - 83vw) / 2);
+      }
+
+      @media screen and (min-width: 1281px) {
+        margin-left: calc((100vw - 99vw) / 2);
+      }
+    }
+
+    & &__settings-link {
+      @include H7;
+
+      font-weight: bold;
+      min-width: 100%;
+      padding-top: 4px;
+      padding-right: 0;
+    }
+
+    & &__dismiss-link {
+      @include H7;
+
+      color: var(--ui-black);
+      font-weight: bold;
+      padding-top: 4px;
+      padding-left: 0;
+    }
+
+    & &__link {
       @include H7;
 
       width: 100%;
