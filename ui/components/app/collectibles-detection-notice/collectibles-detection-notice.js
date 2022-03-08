@@ -10,7 +10,6 @@ import {
   FONT_WEIGHT,
   DISPLAY,
   FLEX_DIRECTION,
-  BLOCK_SIZES,
 } from '../../../helpers/constants/design-system';
 import { useI18nContext } from '../../../hooks/useI18nContext';
 import Button from '../../ui/button';
@@ -22,22 +21,25 @@ import { getEnvironmentType } from '../../../../app/scripts/lib/util';
 export default function CollectiblesDetectionNotice() {
   const t = useI18nContext();
   const history = useHistory();
-  const environmentType = getEnvironmentType();
+  const isFullScreen = getEnvironmentType() === ENVIRONMENT_TYPE_FULLSCREEN;
 
   return (
     <Box className="collectibles-detection-notice">
       <Dialog type="message" className="collectibles-detection-notice__message">
-        {environmentType !== ENVIRONMENT_TYPE_FULLSCREEN && (
+        {!isFullScreen && (
           <button
             onClick={() => setCollectiblesDetectionNoticeDismissed()}
             className="fas fa-times collectibles-detection-notice__message__close-button"
             data-testid="collectibles-detection-notice-close"
           />
         )}
-        <Box display={DISPLAY.FLEX} width={BLOCK_SIZES.MAX}>
+        <Box display={DISPLAY.FLEX}>
           <Box paddingTop={1}>
             <i
-              style={{ fontSize: '1rem', color: '#037DD6' }}
+              style={{
+                fontSize: '1rem',
+                color: 'var(--color-primary-default)',
+              }}
               className="fa fa-info-circle"
             />
           </Box>
@@ -50,13 +52,13 @@ export default function CollectiblesDetectionNotice() {
             >
               {t('newNFTsDetected')}
             </Typography>
-            {environmentType === ENVIRONMENT_TYPE_FULLSCREEN ? (
+            {isFullScreen ? (
               <Box
                 display={DISPLAY.INLINE_FLEX}
                 flexDirection={FLEX_DIRECTION.ROW}
               >
                 <Typography
-                  color={COLORS.BLACK}
+                  color={COLORS.TEXT_DEFAULT}
                   align={TEXT_ALIGN.LEFT}
                   variant={TYPOGRAPHY.H7}
                 >
@@ -89,7 +91,7 @@ export default function CollectiblesDetectionNotice() {
             ) : (
               <>
                 <Typography
-                  color={COLORS.BLACK}
+                  color={COLORS.TEXT_DEFAULT}
                   align={TEXT_ALIGN.LEFT}
                   variant={TYPOGRAPHY.H7}
                   boxProps={{ marginBottom: 4 }}
