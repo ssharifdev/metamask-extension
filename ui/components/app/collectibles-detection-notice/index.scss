@@ -15,7 +15,7 @@
 
     &__fullscreen-links {
       @media screen and (min-width: 769px) {
-        margin-left: calc((100vw - 81vw) / 2);
+        margin-left: calc((100vw - 80vw) / 2);
       }
 
       @media screen and (min-width: 1281px) {
@@ -27,9 +27,16 @@
       @include H7;
 
       font-weight: bold;
-      min-width: 100%;
       padding-top: 4px;
       padding-right: 0;
+
+      @media screen and (min-width: 769px) {
+        min-width: 90%;
+      }
+
+      @media screen and (min-width: 1281px) {
+        min-width: 100%;
+      }
     }
 
     & &__dismiss-link {
