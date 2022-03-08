@@ -248,7 +248,9 @@ describe('Collectible Items', () => {
       expect(
         setCollectiblesDetectionNoticeDismissedStub,
       ).not.toHaveBeenCalled();
-      fireEvent.click(screen.queryByText('Dismiss'));
+      fireEvent.click(
+        screen.getByTestId('collectibles-detection-notice-close'),
+      );
       expect(setCollectiblesDetectionNoticeDismissedStub).toHaveBeenCalled();
     });
   });

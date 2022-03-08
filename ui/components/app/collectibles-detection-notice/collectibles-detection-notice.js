@@ -16,10 +16,7 @@ import { useI18nContext } from '../../../hooks/useI18nContext';
 import Button from '../../ui/button';
 import { EXPERIMENTAL_ROUTE } from '../../../helpers/constants/routes';
 import { setCollectiblesDetectionNoticeDismissed } from '../../../store/actions';
-import {
-  ENVIRONMENT_TYPE_FULLSCREEN,
-  ENVIRONMENT_TYPE_POPUP,
-} from '../../../../shared/constants/app';
+import { ENVIRONMENT_TYPE_FULLSCREEN } from '../../../../shared/constants/app';
 import { getEnvironmentType } from '../../../../app/scripts/lib/util';
 
 export default function CollectiblesDetectionNotice() {
@@ -30,10 +27,11 @@ export default function CollectiblesDetectionNotice() {
   return (
     <Box className="collectibles-detection-notice">
       <Dialog type="message" className="collectibles-detection-notice__message">
-        {environmentType === ENVIRONMENT_TYPE_POPUP && (
+        {environmentType !== ENVIRONMENT_TYPE_FULLSCREEN && (
           <button
             onClick={() => setCollectiblesDetectionNoticeDismissed()}
             className="fas fa-times collectibles-detection-notice__message__close-button"
+            data-testid="collectibles-detection-notice-close"
           />
         )}
         <Box display={DISPLAY.FLEX} width={BLOCK_SIZES.MAX}>
