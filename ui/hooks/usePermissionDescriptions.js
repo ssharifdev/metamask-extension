@@ -39,6 +39,11 @@ export const usePermissionDescriptions = () => {
         label: t('permission_customConfirmation'),
         rightIcon: null,
       },
+      [RestrictedMethods.snap_notify]: {
+        leftIcon: 'fas fa-bell',
+        label: t('permission_notifications'),
+        rightIcon: null,
+      },
       [RestrictedMethods['snap_getBip44Entropy_*']]: (permissionName) => {
         const coinType = permissionName.split('_').slice(-1);
         return {
