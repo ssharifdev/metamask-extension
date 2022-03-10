@@ -2,7 +2,7 @@
 import { handlers as permittedSnapMethods } from '@metamask/rpc-methods/dist/permitted';
 ///: END:ONLY_INCLUDE_IN
 import { flatten } from 'lodash';
-import { permissionRpcMethods } from '@metamask/snap-controllers';
+import { permissionRpcMethods } from '@metamask/controllers';
 import { selectHooks } from '@metamask/rpc-methods';
 import { ethErrors } from 'eth-rpc-errors';
 import { UNSUPPORTED_RPC_METHODS } from '../../../../shared/constants/network';

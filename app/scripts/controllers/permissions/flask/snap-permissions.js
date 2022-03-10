@@ -2,7 +2,7 @@ import {
   restrictedMethodPermissionBuilders,
   selectHooks,
 } from '@metamask/rpc-methods';
-import { endowmentPermissionBuilders } from '@metamask/snap-controllers';
+import { endowmentPermissionBuilders } from '@metamask/controllers';
 
 /**
  * @returns {Record<string, Record<string, unknown>>} All endowment permission
