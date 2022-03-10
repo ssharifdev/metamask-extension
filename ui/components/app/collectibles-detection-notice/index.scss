@@ -5,56 +5,48 @@
     position: relative;
     padding: 0.75rem 0.75rem 1rem 0.75rem !important;
 
-    &__close-button {
-      color: var(--colors-icon-default);
+    & &__close-button {
+      color: var(--color-icon-default);
       background: none;
       position: absolute;
       cursor: pointer;
       right: 8px;
+
+      @media screen and (min-width: 1439px) {
+        display: none;
+      }
+    }
+
+    & &__data {
+      @media screen and (min-width: 1439px) {
+        display: inline-flex;
+      }
     }
 
     &__fullscreen-links {
-      @media screen and (min-width: 769px) {
-        margin-left: calc((100vw - 80vw) / 2);
-      }
-
-      @media screen and (min-width: 1281px) {
-        margin-left: calc((100vw - 99vw) / 2);
+      @media screen and (min-width: 1439px) {
+        margin-left: calc((100vw - 95vw) / 2);
       }
     }
 
-    & &__settings-link {
-      @include H7;
-
-      font-weight: bold;
-      padding-top: 4px;
-      padding-right: 0;
-
-      @media screen and (min-width: 769px) {
-        min-width: 90%;
-      }
-
-      @media screen and (min-width: 1281px) {
-        min-width: 100%;
-      }
-    }
-
+    & &__settings-link,
     & &__dismiss-link {
       @include H7;
 
-      color: var(--color-text-default);
       font-weight: bold;
-      padding-top: 4px;
-      padding-left: 0;
+      padding: 4px 0;
     }
 
-    & &__link {
-      @include H7;
+    & &__settings-link {
+      min-width: 100%;
+    }
 
-      width: 100%;
-      padding: 0;
-      justify-content: flex-start;
-      font-weight: bold;
+    & &__dismiss-link {
+      color: var(--color-text-default);
+
+      @media screen and (max-width: 1439px) {
+        display: none;
+      }
     }
   }
 }
