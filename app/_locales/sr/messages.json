@@ -960,6 +960,9 @@
   "tokenContractAddress": {
     "message": "Adresa ugovora tokena"
   },
+  "tokenDecimalTitle": {
+    "message": "Decimale preciznosti:"
+  },
   "tokenSymbol": {
     "message": "Simbol tokena"
   },

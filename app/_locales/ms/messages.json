@@ -952,6 +952,9 @@
   "tokenContractAddress": {
     "message": "Alamat Kontrak Token"
   },
+  "tokenDecimalTitle": {
+    "message": "Bilangan Perpuluhan Kejituan:"
+  },
   "tokenSymbol": {
     "message": "Simbol Token"
   },

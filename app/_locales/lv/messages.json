@@ -971,6 +971,9 @@
   "tokenContractAddress": {
     "message": "Marķiera līguma adrese"
   },
+  "tokenDecimalTitle": {
+    "message": "Decimāldaļu precizitāte:"
+  },
   "tokenSymbol": {
     "message": "Žetona simbols"
   },

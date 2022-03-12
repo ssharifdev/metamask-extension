@@ -932,6 +932,9 @@
   "tokenContractAddress": {
     "message": "Kontaktná adresa tokenu"
   },
+  "tokenDecimalTitle": {
+    "message": "Počet desetinných míst přesnosti:"
+  },
   "tokenSymbol": {
     "message": "Symbol tokenu"
   },

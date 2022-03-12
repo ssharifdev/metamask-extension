@@ -188,6 +188,9 @@
   "aggregatorFeeCost": {
     "message": "Frais de réseau de l’agrégateur"
   },
+  "airgapVaultTutorial": {
+    "message": " (Tutoriels)"
+  },
   "alertDisableTooltip": {
     "message": "Vous pouvez modifier ceci dans « Paramètres > Alertes »"
   },
@@ -277,7 +280,7 @@
     "message": "Faire une demande d’annulation ne garantit pas que votre transaction originale sera bien annulée. Dans le cas où l’annulation réussit, vous payerez les frais de transaction indiqués ci-dessus."
   },
   "attemptingConnect": {
-    "message": "Tentative de connexion au réseau"
+    "message": "Tentative de connexion au réseau."
   },
   "attributions": {
     "message": "Attributions"
@@ -401,6 +404,14 @@
   "cancelSpeedUp": {
     "message": "annuler ou accélérer une transaction."
   },
+  "cancelSpeedUpLabel": {
+    "message": "Cette taxe sur le gaz sera de 1 $ l’original.",
+    "description": "$1 is text 'replace' in bold"
+  },
+  "cancelSpeedUpTransactionTooltip": {
+    "message": "Pour qu’une transaction soit reconnue par le réseau, le prix du gaz doit être augmenté de 10 % minimum.",
+    "description": "$1 is string 'cancel' or 'speed up'"
+  },
   "cancellationGasFee": {
     "message": "Frais d’annulation de carburant"
   },
@@ -428,6 +439,10 @@
   },
   "close": {
     "message": "Fermer"
+  },
+  "collectibleAddressError": {
+    "message": "Ce jeton est un NFT. Ajouter sur le $1",
+    "description": "$1 is a clickable link with text defined by the 'importNFTPage' key"
   },
   "confirm": {
     "message": "Confirmer"
@@ -562,6 +577,9 @@
   },
   "contractInteraction": {
     "message": "Interaction avec un contrat"
+  },
+  "convertTokenToNFTDescription": {
+    "message": "Nous avons détecté que cet actif est un NFT. Metamask prend désormais en charge les NFT de façon native. Souhaitez-vous le supprimer de votre liste de jetons et l’ajouter en tant que NFT ?"
   },
   "copiedExclamation": {
     "message": "Copié!"
@@ -706,6 +724,10 @@
   "details": {
     "message": "Détails"
   },
+  "disabledGasOptionToolTipMessage": {
+    "message": "« 1 $ » est désactivé, car il ne respecte pas l’augmentation de 10 % minimum par rapport au tarif initial de gaz.",
+    "description": "$1 is gas estimate type which can be market or aggressive"
+  },
   "disconnect": {
     "message": "Déconnecter"
   },
@@ -746,7 +768,7 @@
     "message": "Téléchargez cette phrase de sauvegarde secrète et conservez-la en lieu sûr sur un disque dur ou un support de stockage externe chiffré."
   },
   "downloadStateLogs": {
-    "message": "Télécharger les Logs d'état"
+    "message": "Télécharger les Logs d’état"
   },
   "dropped": {
     "message": "Déconnecté"
@@ -759,6 +781,9 @@
   },
   "editAddressNickname": {
     "message": "Modifier le pseudo de l’adresse"
+  },
+  "editCancellationGasFeeModalTitle": {
+    "message": "Modifier les frais d’annulation de gaz"
   },
   "editContact": {
     "message": "Modifier le contact"
@@ -828,10 +853,10 @@
     "message": "Les frais de priorité doivent être supérieurs à 0."
   },
   "editGasMaxPriorityFeeHigh": {
-    "message": "Les frais de priorité maximaux sont plus élevés que nécessaire. Vous risquez de payer plus que nécessaire."
+    "message": "Les frais de priorité maximaux sont plus élevés que nécessaire. Vous risquez de payer plus que prévu."
   },
   "editGasMaxPriorityFeeHighV2": {
-    "message": "Les frais de priorité sont plus élevés que nécessaire. Vous risquez de payer plus que nécessaire"
+    "message": "Les frais de priorité maximaux sont plus élevés que nécessaire. Vous risquez de payer plus que prévu"
   },
   "editGasMaxPriorityFeeLow": {
     "message": "Les frais de priorité maximaux sont faibles par rapport aux conditions actuelles du réseau"
@@ -879,8 +904,27 @@
   "editPermission": {
     "message": "Modifier l’autorisation"
   },
+  "editSpeedUpEditGasFeeModalTitle": {
+    "message": "Modifier les frais de gaz d’accélération"
+  },
   "enableAutoDetect": {
     "message": " Activer la détection automatique"
+  },
+  "enableEIP1559V2": {
+    "message": "Activer l’interface de frais de gaz améliorés"
+  },
+  "enableEIP1559V2AlertMessage": {
+    "message": "Nous avons mis à jour le fonctionnement de l’estimation et de la personnalisation des frais de gaz."
+  },
+  "enableEIP1559V2ButtonText": {
+    "message": "Activez l’interface des frais de gaz améliorés dans les paramètres"
+  },
+  "enableEIP1559V2Description": {
+    "message": "Nous avons mis à jour le fonctionnement de l’estimation et de la personnalisation du gaz. Activez si vous souhaitez utiliser la nouvelle expérience pour le gaz. $1",
+    "description": "$1 here is Learn More link"
+  },
+  "enableEIP1559V2Header": {
+    "message": "Nouvelle expérience de gaz"
   },
   "enableFromSettings": {
     "message": " Activez-la depuis les Paramètres."
@@ -1071,6 +1115,26 @@
     "message": "de",
     "description": "Part of the sentence describing when and where snap was added"
   },
+  "flaskWelcomeUninstall": {
+    "message": "vous devriez désinstaller cette extension",
+    "description": "This request is shown on the Flask Welcome screen. It is intended for non-developers, and will be bolded."
+  },
+  "flaskWelcomeWarning1": {
+    "message": "Flask est réservé aux développeurs pour les tests de nouvelles API instables. Sauf si vous êtes un développeur ou un bêta-testeur, $1.",
+    "description": "This is a warning shown on the Flask Welcome screen, intended to encourage non-developers not to proceed any further. $1 is the bolded message 'flaskWelcomeUninstall'"
+  },
+  "flaskWelcomeWarning2": {
+    "message": "Nous ne garantissons pas la sécurité ou la stabilité de cette extension. La protection des nouvelles API de Flask n’est pas renforcée contre les attaques de phishing. Tout site ou snap nécessitant Flask pourrait être par une tentative malveillante de voler vos actifs.",
+    "description": "This explains the risks of using MetaMask Flask"
+  },
+  "flaskWelcomeWarning3": {
+    "message": "Toutes les API de Flask sont expérimentales. Elles peuvent être modifiées ou supprimées sans préavis, voire rester sur Flask indéfiniment sans jamais être migrées vers MetaMask, qui est stable. Vous les utiliserez donc à vos risques et périls.",
+    "description": "This message warns developers about unstable Flask APIs"
+  },
+  "flaskWelcomeWarningAcceptButton": {
+    "message": "J’accepte les risques",
+    "description": "this text is shown on a button, which the user presses to confirm they understand the risks of using Flask"
+  },
   "followUsOnTwitter": {
     "message": "Suivez-nous sur Twitter"
   },
@@ -1208,6 +1272,9 @@
   "grantedToWithColon": {
     "message": "Accordé à :"
   },
+  "gwei": {
+    "message": "GWEI"
+  },
   "happyToSeeYou": {
     "message": "Nous sommes ravis de vous voir."
   },
@@ -1228,7 +1295,7 @@
     "message": "Connecter un portefeuille matériel"
   },
   "hardwareWalletsMsg": {
-    "message": "Selectionnez le portefeuille matériel que vous voulez utiliser avec MetaMask"
+    "message": "Selectionnez le portefeuille matériel que vous voulez utiliser avec MetaMask."
   },
   "here": {
     "message": "ici",
@@ -1289,6 +1356,18 @@
   "importMyWallet": {
     "message": "Importer mon portefeuille"
   },
+  "importNFT": {
+    "message": "Importer des NFT"
+  },
+  "importNFTAddressToolTip": {
+    "message": "Sur OpenSea, par exemple, sur la page du NFT, dans la rubrique Détails, il y a un lien hypertexte bleu intitulé « Adresse du contrat ». En cliquant dessus, vous accéderez à l’adresse du contrat sur Etherscan ; en haut à gauche de cette page, il devrait y avoir une icône intitulée « Contrat », et à droite, une longue chaîne de lettres et de chiffres. Cette adresse du contrat a créé votre NFT. Cliquez sur l’icône « copier » à droite de l’adresse, celle-ci se trouvera dans votre presse-papiers."
+  },
+  "importNFTPage": {
+    "message": "Importer une page NFT"
+  },
+  "importNFTTokenIdToolTip": {
+    "message": "L’ID d’un collectible est un identifiant unique, car il n’y a pas deux NFT identiques. Sur OpenSea, ce nombre est également sous « Détails ». Notez bien ce numéro, ou copiez-le dans votre presse-papiers."
+  },
   "importNFTs": {
     "message": "Importer des NFT"
   },
@@ -1341,6 +1420,9 @@
   },
   "invalidAddressRecipientNotEthNetwork": {
     "message": "Pas de réseau ETH, régler en minuscules"
+  },
+  "invalidAssetType": {
+    "message": "Cet actif est un NFT à rajouter sur la page d’importation des NFT qui se trouve sous l’onglet NFT"
   },
   "invalidBlockExplorerURL": {
     "message": "URL de l’explorateur de blocs invalide"
@@ -1527,6 +1609,9 @@
   "mainnet": {
     "message": "Réseau principal Ethereum"
   },
+  "mainnetToken": {
+    "message": "Cette adresse correspond à une adresse de jeton réseau principal Ethereum. Vérifiez à nouveau l’adresse du contrat et le réseau pour le jeton que vous essayez d’ajouter."
+  },
   "makeAnotherSwap": {
     "message": "Créer un nouveau swap"
   },
@@ -1677,6 +1762,9 @@
   },
   "networkDetails": {
     "message": "Détails du réseau"
+  },
+  "networkIsBusy": {
+    "message": "Le réseau est occupé. Les prix du gaz sont élevés et les estimations sont moins précises."
   },
   "networkName": {
     "message": "Nom du réseau"
@@ -2201,6 +2289,9 @@
   "removeNFT": {
     "message": "Supprimer le NFT"
   },
+  "replace": {
+    "message": "remplacer"
+  },
   "requestsAwaitingAcknowledgement": {
     "message": "demandes en attente d’un accusé de réception"
   },
@@ -2407,6 +2498,9 @@
   "sendTokens": {
     "message": "Envoyer des jetons"
   },
+  "sendingDisabled": {
+    "message": "L’envoi d’actifs ERC-1155 NFT n’est pas encore pris en charge."
+  },
   "sendingNativeAsset": {
     "message": "Envoi de $1",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
@@ -2601,6 +2695,9 @@
   },
   "storePhrase": {
     "message": "Stockez cette phrase dans un gestionnaire de mots de passe comme 1Password."
+  },
+  "stxFailure": {
+    "message": "Échec du swap"
   },
   "submit": {
     "message": "Envoyer"
@@ -2976,6 +3073,9 @@
   "syncWithThreeBoxDisabled": {
     "message": "3Box a été désactivé en raison d’une erreur lors de la synchronisation initiale"
   },
+  "tenPercentIncreased": {
+    "message": "Augmentation de 10 %"
+  },
   "terms": {
     "message": "Conditions d’utilisation"
   },
@@ -3017,8 +3117,14 @@
   "tokenDecimalFetchFailed": {
     "message": "Décimale de jeton requise."
   },
+  "tokenDecimalTitle": {
+    "message": "Décimales de précision:"
+  },
   "tokenDetectionAnnouncement": {
     "message": "Nouveau ! Une détection améliorée des jetons est disponible sur le Mainnet d’Ethereum en tant que fonctionnalité expérimentale. $1"
+  },
+  "tokenId": {
+    "message": "ID de jeton"
   },
   "tokenSymbol": {
     "message": "Symbole du jeton"
@@ -3368,6 +3474,9 @@
   "xOfYPending": {
     "message": "$1 sur $2 en attente",
     "description": "$1 and $2 are intended to be two numbers, where $2 is a total number of pending confirmations, and $1 is a count towards that total"
+  },
+  "yes": {
+    "message": "Oui"
   },
   "yesLetsTry": {
     "message": "Oui, essayons"

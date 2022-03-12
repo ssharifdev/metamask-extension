@@ -963,6 +963,9 @@
   "tokenContractAddress": {
     "message": "Naslov pogodbe žetona"
   },
+  "tokenDecimalTitle": {
+    "message": "Decimalna natančnost:"
+  },
   "tokenSymbol": {
     "message": "Simbol žetona"
   },

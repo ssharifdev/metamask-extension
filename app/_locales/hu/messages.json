@@ -965,6 +965,9 @@
   "tokenContractAddress": {
     "message": "Token szerződéscím"
   },
+  "tokenDecimalTitle": {
+    "message": "A pontosság tizedesjegyei:"
+  },
   "tokenSymbol": {
     "message": "Tokenszimbólum"
   },

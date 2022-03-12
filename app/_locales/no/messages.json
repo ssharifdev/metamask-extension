@@ -950,6 +950,9 @@
   "tokenContractAddress": {
     "message": "Token-kontraktadresse "
   },
+  "tokenDecimalTitle": {
+    "message": "Presisjonsdesimaler:"
+  },
   "tokenSymbol": {
     "message": "Token-symbol"
   },
